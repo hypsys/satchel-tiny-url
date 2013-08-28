@@ -1,6 +1,8 @@
 var http = require('http'),
     url = require('url');
 
+console.log('Starting Tiny URL service on port 80');
+
 http.createServer(function(req, res) {
     var parsedUrl = url.parse(req.url, true);
 
