@@ -1,0 +1,13 @@
+{
+  "name": "satchel-tiny-url",
+  "description": "satchel tiny url service",
+  "version": "0.0.1",
+  "author": {
+    "name": "Rob Bruce",
+    "email": "rob@fourthlabs.com"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
