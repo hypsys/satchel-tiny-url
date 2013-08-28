@@ -4,9 +4,15 @@ var http = require('http'),
 http.createServer(function(req, res) {
     var parsedUrl = url.parse(req.url, true);
 
-    res.writeHead(307, {
-        'Location': 'satchel://' + parsedUrl.pathname.replace(/^\//, '')
-    });
+    if (parsedUrl.pathname == '/ping') {
+        res.writeHead(200, {
+            'Content-Length': 0
+        });
+    } else {
+        res.writeHead(307, {
+            'Location': 'satchel://' + parsedUrl.pathname.replace(/^\//, '')
+        });
+    }
 
     res.end();
 }).listen(80);
